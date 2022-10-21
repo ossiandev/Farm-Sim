@@ -21,12 +21,18 @@
     <ClCompile Include="src\Farmer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Console.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Farmer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Animal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Console.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

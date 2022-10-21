@@ -1,10 +1,16 @@
-//Animal
-#include <string>
+//Animal.h
 #pragma once
+#include <string>
+
 //Groundwork for every animal to inherit. 
 
-std::string species;
-int age;
-float size;
+
+class Animal
+{
+	std::string species;
+	int age;
+	float size;
+	float hunger;
+};
 
 
