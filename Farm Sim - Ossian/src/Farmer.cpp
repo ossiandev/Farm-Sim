@@ -11,7 +11,7 @@
 		while(running)
 		{ 
 			Console::Printf("Hej");
-
+			running = false;
 
 		}
 	}
@@ -35,6 +35,8 @@
 	{
 
 	}
+	//Getters and setters
+	//
 
 	float Farm::GetMoney()
 	{
