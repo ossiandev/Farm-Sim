@@ -23,7 +23,7 @@ public:
 	void FeedAnimal();
 	void BuyAnimal();
 	void BuyStorage();
-
+	void SetName();
 	//Getters and Setters
 	float GetMoney();
 	void SetMoney(float money);
