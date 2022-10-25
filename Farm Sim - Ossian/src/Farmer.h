@@ -4,6 +4,10 @@
 #include "Console.h"
 #include "Animal.h"
 #include <vector>
+#include <stdio.h>      
+#include <stdlib.h>     
+#include <time.h>       
+
 
 class Farm
 {
@@ -17,6 +21,7 @@ public:
 	int animalStorage;
 	std::vector<Animal> animalsOwned;
 	float food;
+	Animal animals[3];
 	//Farmer Interactions
 	void Run();
 	void SellAnimal();

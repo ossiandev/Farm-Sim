@@ -8,20 +8,42 @@
 	void Farm::Run()
 	{
 		
-
+		int daysTotal = 0;
 		SetName();
+		Console::Clear();
+		Console::Printf("How many days would you like to play for?\n");
+		Console::Print("Days: ");
+		std::cin >> daysTotal;
+		Animal animalTemplate;
+		animalTemplate.species = "Chicken";
+		animalTemplate.age = 2; 
+		animalTemplate.size = 1;
+		animalTemplate.hunger = 10;
+		animalTemplate.gender = "Male";
+		animalsOwned.push_back(animalTemplate);
 
-		//Start loop
-		//
-		bool running = true;
-		while(running)
-		{ 
-			Console::Printf("Hej");
-			running = false;
 
+		for (int days = 0; days < daysTotal; days++)
+		{
+			Console::Printf("Day " + days);
+			Console::Printf("You currently have: ");
+			if(animalsOwned.size() < 2)
+			{
+				Console::Printf(animalsOwned.size() + " Animal"); 
+			}
+			else
+			{
+				Console::Printf(animalsOwned.size() + " Animals");
+			}
+
+			
 		}
-		//End Loop
-		//
+		//Cycles through days
+		Console::Printf("Hej");
+			
+
+		
+	
 	}
 
 	//Set farmer name.
@@ -75,8 +97,10 @@
 
 	void Farm::BuyAnimal()
 	{
-		//Create new animal object
+		//Create new animal objects that are randomly generated every 3 days
 		//
+
+
 	}
 
 	void Farm::BuyStorage()
