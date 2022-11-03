@@ -8,11 +8,11 @@
 class Animal
 {
 public:
-	std::string species;
-	int age;
+	std::string animalType;
 	float size;
+	int age;
 	float hunger;
-	std::string gender;
+
 };
 
 

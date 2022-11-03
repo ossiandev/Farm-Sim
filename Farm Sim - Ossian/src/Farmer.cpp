@@ -7,19 +7,24 @@
 
 	void Farm::Run()
 	{
-		
+		//Initalization start
+		knownAnimals[0] = "Chicken";
+		knownAnimals[1] = "Cow";
+		knownAnimals[2] = "Pig";
 		int daysTotal = 0;
+		//Initalization end
 		SetName();
 		Console::Clear();
 		Console::Printf("How many days would you like to play for?\n");
 		Console::Print("Days: ");
 		std::cin >> daysTotal;
 		Animal animalTemplate;
-		animalTemplate.species = "Chicken";
-		animalTemplate.age = 2; 
+	//Add Chicken //Quite cumbersome.
+		animalTemplate.animalType = knownAnimals[0];
+		animalTemplate.age = Console::randNext(1,4);
 		animalTemplate.size = 1;
 		animalTemplate.hunger = 10;
-		animalTemplate.gender = "Male";
+
 		animalsOwned.push_back(animalTemplate);
 
 
@@ -116,9 +121,9 @@
 		return money;
 	}
 
-	void Farm::SetMoney(float thismoney)
+	void Farm::SetMoney(float newMoney)
 	{
-		money = thismoney;
+		money = newMoney;
 	}
 
 

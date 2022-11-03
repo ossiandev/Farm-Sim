@@ -14,7 +14,7 @@ class Farm
 	//Farmer Values
 private:
 	float money;
-	
+
 public:
 	std::string name;
 	int animalAmount;
@@ -22,7 +22,9 @@ public:
 	std::vector<Animal> animalsOwned;
 	float food;
 	Animal animals[3];
+	std::string knownAnimals[3];
 	//Farmer Interactions
+	Animal animalCreation(std::string animalType, int age, int size);
 	void Run();
 	void SellAnimal();
 	void FeedAnimal();

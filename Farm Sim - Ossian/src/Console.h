@@ -1,6 +1,9 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctime>
 
 
 namespace Console
@@ -10,5 +13,6 @@ namespace Console
 	void Clear();
 	template <typename T>
 	void Printf(T t);
+	int randNext(int minValue, int maxValue);
 
 }
