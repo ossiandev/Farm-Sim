@@ -5,7 +5,9 @@
 
 //Farmers Actions
 
-	void Farm::Run()
+
+
+void Farm::Run()
 	{
 		//Initalization start
 		knownAnimals[0] = "Chicken";
@@ -99,7 +101,22 @@
 		//Increase animal object food value
 		//
 	}
-
+	Animal Farm::animalCreation(std::string animalType, int age)
+	{
+		Animal templateAnimal;
+		if (animalType == "Chicken")
+		{
+			templateAnimal.size = 1;
+		}
+		else 
+		{
+			templateAnimal.size = 2;
+		}
+		templateAnimal.age = age;
+		templateAnimal.animalType = animalType;
+		templateAnimal.hunger = 10;
+		return templateAnimal;
+	}
 	void Farm::BuyAnimal()
 	{
 		//Create new animal objects that are randomly generated every 3 days

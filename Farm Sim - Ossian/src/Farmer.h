@@ -24,7 +24,7 @@ public:
 	Animal animals[3];
 	std::string knownAnimals[3];
 	//Farmer Interactions
-	Animal animalCreation(std::string animalType, int age, int size);
+	Animal animalCreation(std::string animalType, int age);
 	void Run();
 	void SellAnimal();
 	void FeedAnimal();
