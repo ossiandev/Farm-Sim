@@ -11,7 +11,7 @@ public:
 	std::string animalType;
 	float size;
 	int age;
-	float hunger;
+	int hunger;
 
 };
 

@@ -19,7 +19,7 @@ void Console::Clear()
 }
 
 //Generates a value between minValue and maxValue
-int Console::randNext(int minValue, int maxValue)
+int Console::RandNext(int minValue, int maxValue)
 {
 	//generates a seed for random with time
 	srand((unsigned)time(0));

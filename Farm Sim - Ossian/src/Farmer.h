@@ -21,13 +21,11 @@ public:
 	int animalStorage;
 	std::vector<Animal> animalsOwned;
 	float food;
-	Animal animals[3];
-	std::string knownAnimals[3];
 	//Farmer Interactions
-	Animal animalCreation(std::string animalType, int age);
+	Animal AnimalCreation(Animal templateAnimal, std::string animalType, int age);
 	void Run();
-	void SellAnimal();
-	void FeedAnimal();
+	void SellAnimal(Animal animal);
+	void FeedAnimal(Animal animal, int foodGiven);
 	void BuyAnimal();
 	void BuyStorage();
 	void SetName();

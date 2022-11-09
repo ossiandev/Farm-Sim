@@ -8,51 +8,32 @@
 
 
 void Farm::Run()
+{
+	//Initalization start
+	int daysTotal = 0;
+	//Initalization end
+	SetName();
+	Console::Clear();
+	Console::Printf("How many days would you like to play for?\n");
+	Console::Print("Days: ");
+	std::cin >> daysTotal;
+	for (int days = 0; days < daysTotal; days++)
 	{
-		//Initalization start
-		knownAnimals[0] = "Chicken";
-		knownAnimals[1] = "Cow";
-		knownAnimals[2] = "Pig";
-		int daysTotal = 0;
-		//Initalization end
-		SetName();
-		Console::Clear();
-		Console::Printf("How many days would you like to play for?\n");
-		Console::Print("Days: ");
-		std::cin >> daysTotal;
-		Animal animalTemplate;
-	//Add Chicken //Quite cumbersome.
-		animalTemplate.animalType = knownAnimals[0];
-		animalTemplate.age = Console::randNext(1,4);
-		animalTemplate.size = 1;
-		animalTemplate.hunger = 10;
-
-		animalsOwned.push_back(animalTemplate);
-
-
-		for (int days = 0; days < daysTotal; days++)
+		Console::Printf("Day " + days);
+		Console::Printf("You currently have: ");
+		if(animalsOwned.size() < 2)
 		{
-			Console::Printf("Day " + days);
-			Console::Printf("You currently have: ");
-			if(animalsOwned.size() < 2)
-			{
-				Console::Printf(animalsOwned.size() + " Animal"); 
-			}
-			else
-			{
-				Console::Printf(animalsOwned.size() + " Animals");
-			}
-
-			
+			Console::Printf(animalsOwned.size() + " Animal"); 
 		}
-		//Cycles through days
-		Console::Printf("Hej");
-			
-
-		
-	
+		else
+		{
+			Console::Printf(animalsOwned.size() + " Animals");
+		}
 	}
-
+	//Cycles through days
+	Console::Printf("Hej");
+}
+	
 	//Set farmer name.
 	void Farm::SetName()
 	{
@@ -62,7 +43,6 @@ void Farm::Run()
 			Console::Clear();
 			Console::Printf("Please write your farmers name.\n");
 			Console::Print("Name: ");
-
 			std::string name = "";
 			std::cin.ignore();
 			std::getline(std::cin, name);
@@ -88,22 +68,24 @@ void Farm::Run()
 			}
 		}
 	}
+	
 
-
-	void Farm::SellAnimal()
+	void Farm::SellAnimal(Animal animal)
 	{
-		//Destroy animal object
-		//
+		//Animal Destructor	
+
 	}
 
-	void Farm::FeedAnimal()
+	void Farm::FeedAnimal(Animal animal, int foodGiven)
 	{
 		//Increase animal object food value
 		//
+		
+
 	}
-	Animal Farm::animalCreation(std::string animalType, int age)
+	Animal Farm::AnimalCreation(Animal templateAnimal, std::string animalType, int age)
 	{
-		Animal templateAnimal;
+		
 		if (animalType == "Chicken")
 		{
 			templateAnimal.size = 1;
@@ -112,9 +94,10 @@ void Farm::Run()
 		{
 			templateAnimal.size = 2;
 		}
+
 		templateAnimal.age = age;
 		templateAnimal.animalType = animalType;
-		templateAnimal.hunger = 10;
+		templateAnimal.hunger = 10;//Console::RandNext(6,10);
 		return templateAnimal;
 	}
 	void Farm::BuyAnimal()

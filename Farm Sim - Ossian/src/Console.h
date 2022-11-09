@@ -13,6 +13,6 @@ namespace Console
 	void Clear();
 	template <typename T>
 	void Printf(T t);
-	int randNext(int minValue, int maxValue);
+	int RandNext(int minValue, int maxValue);
 
 }
